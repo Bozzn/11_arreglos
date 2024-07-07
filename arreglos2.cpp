@@ -14,6 +14,7 @@ int main(){
     
     int *dir_num, i = 0;
     dir_num = numeros;
+    cout << "--------------NUMEROS PARES E IMPARES--------------";
     while (i < n)
     {
         if (*dir_num % 2 == 0)
