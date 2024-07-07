@@ -54,7 +54,7 @@ cout << "\n----------REGISTRO DE DIAS-----------\n\n";
 
 cout << "\n-----------EL/LOS DIAS CON MENOR TEMPERATURA-----------\n\n";
 
-    
+    //IMPRIMIR LOS DIAS CON MENOR TEMPERATURA.
     for (int i = 0; i < 7; i++)
     {
         if (promedio[i] == min)
@@ -67,7 +67,10 @@ cout << "\n-----------EL/LOS DIAS CON MENOR TEMPERATURA-----------\n\n";
     float val;
     cout << "\n-----------EL/LOS DIAS CON MAYOR TEMPERATURA-----------\n\n";
 
+    //IMPRIMIR LOS DIAS CON MAYOR TEMPERATURA.
     cout << "Ingrese un un valor: "; cin >> val;
+    if (val == max)
+    {
     
     for (int i = 0; i < 7; i++)
     {
@@ -77,5 +80,11 @@ cout << "\n-----------EL/LOS DIAS CON MENOR TEMPERATURA-----------\n\n";
         }
         
     }
+    }
+    else
+    {
+        cout << "ERROR | El valor ingresado no es la temperatura maxima.";
+    }
+
     return EXIT_SUCCESS;
 }
