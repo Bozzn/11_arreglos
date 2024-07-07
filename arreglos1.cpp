@@ -1,9 +1,11 @@
+//by:Piero García.
+
 #include  <iostream>
 #include <conio.h>
 using namespace std; 
 int main(){ 
     int n, s = 0; float j = 0, porcent;
-cout <<"----------SUMA Y PORCENTAJE DE 0S----------\n\n";
+cout <<"----------SUMA Y PORCENTAJE DE 0'S----------\n\n";
     cout << "Ingrese la cantidad de elementos: "; cin >> n;
     int array[n];
     for (int i = 0; i < n; i++)
