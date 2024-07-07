@@ -1,3 +1,5 @@
+//by:Piero García.
+
 #include <iostream>
 #include <conio.h>
 using namespace std; 
@@ -17,12 +19,11 @@ int main(){
         if (*dir_num % 2 == 0)
         {
             cout << "El numero de la posicion["<<i<<"] es: " << *dir_num << " (PAR)." << endl; 
-            cout << "Posicion: " << dir_num << endl << endl;
         }
         else
         {
             cout << "El numero de la posicion ["<<i<<"] es: " << *dir_num << " (IMPAR)." <<endl;
-            cout << "Posicion: " << dir_num << endl << endl;
+
         }
         
         dir_num++;
