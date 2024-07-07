@@ -1,32 +1,81 @@
+//by:Piero García.
+
 #include <iostream>
 #include <conio.h>
 #include <string>
 using namespace std;
-int hallarminimo(int, int);
+
 int main(){
-    int temperature[7];
-    int s, promedio;
+    int n;
+    float promedio[7], suma;
     string dias[7] = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};
     for (int i = 0; i < 7; i++)
     {
-        for (int j = 0; j < 7; j++)
-        {
-            cout << "Ingrese la temperatura del dia " << dias[j] << " :"; cin >> temperature[i];
-        }
-        s = s + temperature[i];
+        cout << "Ingrese el numero de temperaturas registradas el dia " << dias[i] << " : "; cin >> n;
+        float temperature[n];
+        suma = 0;
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Ingrese la temperatura " << i + 1 << ": "; cin >> temperature[i];
+        suma = suma + temperature[i];
     }
-    promedio = s / 7;
-    return EXIT_SUCCESS;
-}
-int hallarminio(int a){
-    int min = 0;
+        promedio[i] = suma / n;
+    }
+    
+    float min; 
+    min = 999;
     for (int i = 0; i < 7; i++)
     {
-        if (a < min)
+        if (promedio[i] < min)
         {
-            min = a;
+        min = promedio[i];
         }
         
     }
     
-    return min;
+    float max;
+    max = -999;
+    for (int i = 0; i < 7; i++)
+    {
+        if (promedio[i] > max)
+        {
+        max = promedio[i];
+        }
+    }
+    
+cout << "\n----------REGISTRO DE DIAS-----------\n\n";
+
+    cout << "PROMEDIO: \n";
+    for (int i = 0; i < 7; i++)
+    {
+            cout << dias[i] << ": " <<  promedio[i] << " C.\n";
+    }
+    
+
+cout << "\n-----------EL/LOS DIAS CON MENOR TEMPERATURA-----------\n\n";
+
+    
+    for (int i = 0; i < 7; i++)
+    {
+        if (promedio[i] == min)
+        {
+            cout << dias[i] << ": " << min << " C.\n";
+        }
+        
+    }
+    
+    float val;
+    cout << "\n-----------EL/LOS DIAS CON MAYOR TEMPERATURA-----------\n\n";
+
+    cout << "Ingrese un un valor: "; cin >> val;
+    
+    for (int i = 0; i < 7; i++)
+    {
+        if (promedio[i] == max)
+        {
+            cout << dias[i] << ": " << max << " C.\n";
+        }
+        
+    }
+    return EXIT_SUCCESS;
+}
