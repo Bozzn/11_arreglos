@@ -15,12 +15,12 @@ int main(){
     cout << "Alumnos del curso de FP: \n";
     for (int i = 0; i < n; i++)
     {
-        cout << "Ingrese el nombre del alumno numero["<< i + 1 <<"]: "; cin >> alumnosFP[i]; 
+        cout << "Ingrese el nombre del alumno numero["<< i + 1 <<"]: "; getline(cin, alumnosFP[i]); 
     }
     cout << "Alumnos del curso de PG: \n";
     for (int i = 0; i < m; i++)
     {
-        cout << "Ingrese el nommbre del alumno numero["<< i + 1 << "]: "; cin >> alumnosPG[i];
+        cout << "Ingrese el nommbre del alumno numero["<< i + 1 << "]: "; getline(cin, alumnosPG[i]); 
     }
     int y = 0;
 cout << "\n\n---------------LOS ALUMNOS QUE LLEVAN EL MISMO CURSO SON-----------------\n\n";
